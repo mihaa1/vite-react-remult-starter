@@ -1,7 +1,8 @@
-import express from 'express';
+import express from 'express'
+import { api } from './api'
+const app = express()
 
-const app = express();
+app.get('/hello', (_req, res) => res.send('Hello World!'))
+app.use(api)
 
-app.get('/hello', (req, res) => res.send('Hello World!'));
-
-app.listen(process.env['PORT'] || 3002, () => console.log('Server started'));
+app.listen(process.env['PORT'] || 3002, () => console.log('Server started'))
