@@ -17,7 +17,7 @@ function App() {
 			const res = await remult.repo(User).find()
 			setUsers(res)
 		} catch (e) {
-			console.log('Error fetchin users', e)
+			console.log('Error fetching users', e)
 		}
 	}
 
